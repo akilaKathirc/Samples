@@ -11,6 +11,10 @@ import { REPORTER } from './tokens/reporter.tokens';
 import { CVA1Component } from './cva1/cva1.component';
 import { CVA2Component } from './cva2/cva2.component';
 import { CVAParentComponent } from './cva-parent/cva-parent.component';
+import { VelocityWidgetComponent } from './velocity-widget/velocity-widget.component';
+import { SpeedWidgetComponent } from './speed-widget/speed-widget.component';
+import { WrapperWidgetComponent } from './wrapper-widget/wrapper-widget.component';
+import { ParentWidgetComponent } from './parent-widget/parent-widget.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { CVAParentComponent } from './cva-parent/cva-parent.component';
     ReporterConsumerComponent,
     CVA1Component,
     CVA2Component,
-    CVAParentComponent
+    CVAParentComponent,
+    VelocityWidgetComponent,
+    SpeedWidgetComponent,
+    WrapperWidgetComponent,
+    ParentWidgetComponent
   ],
   imports: [
     BrowserModule,

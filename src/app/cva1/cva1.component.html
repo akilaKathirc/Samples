@@ -1,0 +1,7 @@
+<p>cva1 works!</p>
+<form [formGroup]="CVA_Form">
+    <input type="text" formControlName="name">
+    <app-cva2 formControlName="isLocked"></app-cva2>
+
+    <button type="submit" (click)="SubmitForm()" [disabled]="!CVA_Form.touched">Submit</button>
+</form>

@@ -1,50 +1,83 @@
 .app-loading {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
-  .app-loading .spinner {
-    height: 200px;
-    width: 200px;
-    animation: rotate 2s linear infinite;
-    transform-origin: center center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
+.app-loading .spinner {
+  height: 200px;
+  width: 200px;
+  animation: flipYIn 800ms;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
-  .app-loading .spinner .path {
+.app-loading .spinner .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #ddd;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
-    animation: dash 1.5s ease-in-out infinite;
-    stroke-linecap: round;
-    stroke: #ddd;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes flipYIn {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg) scale(2);
+    animation-timing-function: ease-in;
+    opacity: 0;
   }
 
-  @keyframes rotate {
-    100% {
-      transform: rotate(360deg);
-    }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg) scale(1.75);
+    animation-timing-function: ease-in;
   }
 
-  @keyframes dash {
-    0% {
-      stroke-dasharray: 1, 200;
-      stroke-dashoffset: 0;
-    }
-    50% {
-      stroke-dasharray: 89, 200;
-      stroke-dashoffset: -35px;
-    }
-    100% {
-      stroke-dasharray: 89, 200;
-      stroke-dashoffset: -124px;
-    }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg) scale(1.5);
+    opacity: 1;
   }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg) scale(1);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+h2 {
+  color: rgb(217 22 91);
+  border: 3px solid rgb(217 22 91);
+  background: #8fe0e6;
+}

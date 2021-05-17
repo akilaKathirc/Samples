@@ -16,7 +16,9 @@ export class VelocityWidgetComponent implements OnInit, Widget {
   public isRefresh: boolean = false;
 
 
-  constructor() { }
+  constructor() {
+    console.log('sddsf'); 
+    }
   load() {
     this.isLoad = !this.isLoad;
   }

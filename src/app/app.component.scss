@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    padding: 3rem auto;
+    & ul {
+        & li {
+            display: inline-block;
+            margin-left: 3px;
+
+            & a {
+                text-decoration: none;
+                padding: 1rem 3rem;
+                border-radius: 50px;
+                border: 2px solid black;
+                background: linear-gradient(to right, #095cda, #058867);
+            }
+        }
+    }
+}

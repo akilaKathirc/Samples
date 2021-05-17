@@ -15,6 +15,7 @@ import { VelocityWidgetComponent } from './velocity-widget/velocity-widget.compo
 import { SpeedWidgetComponent } from './speed-widget/speed-widget.component';
 import { WrapperWidgetComponent } from './wrapper-widget/wrapper-widget.component';
 import { ParentWidgetComponent } from './parent-widget/parent-widget.component';
+import { JsfunctionsComponent } from './jsfunctions/jsfunctions.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ParentWidgetComponent } from './parent-widget/parent-widget.component';
     VelocityWidgetComponent,
     SpeedWidgetComponent,
     WrapperWidgetComponent,
-    ParentWidgetComponent
+    ParentWidgetComponent,
+    JsfunctionsComponent
   ],
   imports: [
     BrowserModule,

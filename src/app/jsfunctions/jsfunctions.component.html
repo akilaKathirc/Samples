@@ -1,0 +1,14 @@
+<div class="container">
+    <p>jsfunctions works!</p>
+    <div class="destructing">
+        <button class="cake" (click)="cakeRecipeDestructing()">Cake Batter</button>
+    </div>
+
+    <div class="listings">
+        <ul>
+            <li *ngFor="let item of batters">
+                {{item.type}}
+            </li>
+        </ul>
+    </div>
+</div>

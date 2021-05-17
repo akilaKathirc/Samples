@@ -17,10 +17,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('ala ', this.alpha.message);
+    // console.log('ala ', this.alpha.message);
 
-    console.log(this.beta.message);
+    // console.log(this.beta.message);
 
-    console.log(`is both same ${this.alpha === this.beta} , ${this.alpha.report()} , ${this.beta.report()}`)
+    // console.log(`is both same ${this.alpha === this.beta} , ${this.alpha.report()} , ${this.beta.report()}`)
   }
 }

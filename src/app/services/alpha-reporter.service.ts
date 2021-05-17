@@ -8,6 +8,6 @@ export class AlphaReporterService implements Reporter {
   public message: string = 'Hiii Akila....I\'m Alpha';
   constructor() { }
   report(): void {
-    console.log('Token for Alpha service');
+    // console.log('Token for Alpha service');
   }
 }

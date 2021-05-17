@@ -1,19 +1,34 @@
-<header>
-    <nav class="nav-bar">
-        <ul>
-            <li class="links"><a [routerLink]="['/tokens']"><span>InjectionToken</span></a>
-            </li>
+<div class="header-container" style="display: none;">
+    <header>
+        <nav class="nav-bar">
+            <ul>
+                <li class="links"><a [routerLink]="['/tokens']"><span>InjectionToken</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/cva']"><span>Control Value Accessor</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/widget']"><span>Design Pattern</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/js']"><span>Javascript</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/chart']"><span>Bar Chart</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/pie']"><span>Pie Chart</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/rxjs']"><span>RXJS</span></a>
+                </li>
 
-            <li class="links"><a [routerLink]="['/cva']"><span>Control Value Accessor</span></a>
-            </li>
-
-            <li class="links"><a [routerLink]="['/widget']"><span>Design Pattern</span></a>
-            </li>
-            <li class="links"><a [routerLink]="['/js']"><span>Javascript</span></a>
-            </li>
-
-        </ul>
-    </nav>
-</header>
-
+                <li class="links"><a [routerLink]="['/stars']"><span>Stars</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
 <router-outlet></router-outlet>
+
+<!-- 
+<div class="content">
+
+    <h2>
+        This is from App component
+    </h2>
+</div> -->

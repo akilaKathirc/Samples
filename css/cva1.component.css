@@ -1,0 +1,10 @@
+.engulf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #2c9e5c;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: content-box;
+}
+/*# sourceMappingURL=cva1.component.css.map */

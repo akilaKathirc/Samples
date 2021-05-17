@@ -1,7 +1,15 @@
 <div class="container">
-    <p>jsfunctions works!</p>
+    <h2>jsfunctions works!</h2>
     <div class="destructing">
         <button class="cake" (click)="cakeRecipeDestructing()">Cake Batter</button>
+
+        <button class="cake" (click)="getUsers()">Pluck</button>
+
+        <button class="cake" (click)="jsSpread()">Object Assign</button>
+        <button class="cake" (click)="forIn()">For In</button>
+        <button class="cake" (click)="forOf()">For Of</button>
+
+
     </div>
 
     <div class="listings">
@@ -11,4 +19,19 @@
             </li>
         </ul>
     </div>
+</div>
+
+<div class="container" *ngIf="arraySpread">
+    Array Spreaded
+    <ul>
+        <li *ngFor="let item of arraySpread">
+            {{item.name}} - {{item.age}}
+        </li>
+    </ul>
+</div>
+
+
+<div class="container" *ngIf="objectSpread">
+    Object Spreaded and assigned
+    {{objectSpread?.name}} - {{objectSpread?.age}}
 </div>

@@ -1,0 +1,15 @@
+<ngx-charts-bar-vertical [view]="[1000,400]" [results]="saleData" [xAxisLabel]="'Products'"
+    [legendTitle]="'Product Sale Chart'" [yAxisLabel]="'Sale'" [legend]="true" [showXAxisLabel]="true"
+    [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+</ngx-charts-bar-vertical>
+
+<ngx-charts-pie-chart [results]="saleData" [legend]="true" [legendTitle]="'Product Sale Report'" [view]="[1000,300]"
+    [labels]="true">
+</ngx-charts-pie-chart>
+
+<ngx-charts-advanced-pie-chart [results]="saleData" [gradient]="true">
+</ngx-charts-advanced-pie-chart>
+
+
+<ngx-charts-pie-grid [results]="saleData">
+</ngx-charts-pie-grid>

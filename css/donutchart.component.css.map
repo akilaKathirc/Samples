@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/donutchart/donutchart.component.scss"
+    ],
+    "names": [],
+    "file": "donutchart.component.css"
+}

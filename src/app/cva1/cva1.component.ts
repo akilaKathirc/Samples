@@ -19,6 +19,6 @@ export class CVA1Component implements OnInit {
   }
 
   SubmitForm() {
-    console.log(this.CVA_Form.value)
+    // console.log(this.CVA_Form.value)
   }
 }

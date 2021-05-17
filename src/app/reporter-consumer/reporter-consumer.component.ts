@@ -13,8 +13,8 @@ export class ReporterConsumerComponent implements OnInit {
 
   ngOnInit(): void {
     this.reporter.forEach((repor) => {
-      console.log(repor.message);
-      console.log(repor);
+      // console.log(repor.message);
+      // console.log(repor);
     });
   }
 

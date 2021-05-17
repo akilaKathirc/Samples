@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,OAAgB;EAClC,UAAU,EAAE,kBAAkB;EAC9B,UAAU,EAAE,WAAW;CAC1B",
+    "sources": [
+        "../src/app/cva-parent/cva-parent.component.scss"
+    ],
+    "names": [],
+    "file": "cva-parent.component.css"
+}

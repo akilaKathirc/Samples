@@ -4,7 +4,7 @@ export const constReporter: Reporter = {
     message: 'Const message',
 
     report() {
-        console.log('const report');
+        // console.log('const report');
     }
 }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { USERS } from '../data/users.mock';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-parent-widget',
@@ -8,9 +10,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ParentWidgetComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit(): void {
+    this.dataService.GetUser(USERS);
   }
 
 }

@@ -9,6 +9,6 @@ export class BetaReporterService implements Reporter {
 
   constructor() { }
   report(): void {
-    console.log('Injection token for BetaService ');
+    // console.log('Injection token for BetaService ');
   }
 }

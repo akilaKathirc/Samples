@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,10 @@ import { SpeedWidgetComponent } from './speed-widget/speed-widget.component';
 import { WrapperWidgetComponent } from './wrapper-widget/wrapper-widget.component';
 import { ParentWidgetComponent } from './parent-widget/parent-widget.component';
 import { JsfunctionsComponent } from './jsfunctions/jsfunctions.component';
+import { BarchartComponent } from './barchart/barchart.component';
+import { DonutchartComponent } from './donutchart/donutchart.component';
+import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
+import { ShootingstarsComponent } from './shootingstars/shootingstars.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +35,18 @@ import { JsfunctionsComponent } from './jsfunctions/jsfunctions.component';
     SpeedWidgetComponent,
     WrapperWidgetComponent,
     ParentWidgetComponent,
-    JsfunctionsComponent
+    JsfunctionsComponent,
+    BarchartComponent,
+    DonutchartComponent,
+    RxjsOperatorsComponent,
+    ShootingstarsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxChartsModule
   ],
   providers: [
     // { provide: REPORTER, useExisting: AlphaReporterService, multi: true },

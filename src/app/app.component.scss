@@ -4,12 +4,26 @@
     box-sizing: border-box;
 }
 
+.header-container {
+    display: block;
+    height: auto;
+    border: 5px solid red;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-sizing: content-box;
+}
 .nav-bar {
     padding: 3rem auto;
+    height: auto;
     & ul {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-around;
+        // flex-direction: row;
+        // flex-wrap: wrap;
         & li {
             display: inline-block;
-            margin-left: 3px;
+            margin: 1.5rem 1rem;
 
             & a {
                 text-decoration: none;
@@ -20,4 +34,8 @@
             }
         }
     }
+}
+
+h2 {
+    background: #1ba755;
 }

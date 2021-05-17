@@ -1,0 +1,24 @@
+:host ::ng-deep h2 {
+  background: linear-gradient(to right, #a71a1a, #1ba755);
+}
+
+.container {
+  padding: 1.5rem 3rem;
+}
+
+.destructing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.5rem 3rem;
+}
+
+.cake {
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  border: 2px solid linear-gradient(to right, #095cda, #058867);
+  background: coral;
+  background-size: 400%;
+}
+/*# sourceMappingURL=jsfunctions.component.css.map */

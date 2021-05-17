@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/reporter-consumer/reporter-consumer.component.scss"
+    ],
+    "names": [],
+    "file": "reporter-consumer.component.css"
+}

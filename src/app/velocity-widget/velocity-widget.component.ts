@@ -17,8 +17,8 @@ export class VelocityWidgetComponent implements OnInit, Widget {
 
 
   constructor() {
-    console.log('sddsf'); 
-    }
+    // console.log('sddsf'); 
+  }
   load() {
     this.isLoad = !this.isLoad;
   }

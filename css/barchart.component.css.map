@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/barchart/barchart.component.scss"
+    ],
+    "names": [],
+    "file": "barchart.component.css"
+}

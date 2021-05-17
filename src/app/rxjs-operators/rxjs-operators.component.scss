@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(#b61f1f, #1fb61f);
+
+    & .content {
+        margin: 2em;
+        border: 1px solid cornflowerblue;
+        border-radius: 50px;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20vw;
+        background: #d8d3d3;
+    }
+}

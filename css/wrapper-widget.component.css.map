@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/wrapper-widget/wrapper-widget.component.scss"
+    ],
+    "names": [],
+    "file": "wrapper-widget.component.css"
+}

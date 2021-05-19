@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/reactive-forms/reactive-forms.component.scss"
+    ],
+    "names": [],
+    "file": "reactive-forms.component.css"
+}

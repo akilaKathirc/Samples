@@ -1,4 +1,4 @@
-<div class="header-container" style="display: none;">
+<div class="header-container">
     <header>
         <nav class="nav-bar">
             <ul>
@@ -19,11 +19,22 @@
 
                 <li class="links"><a [routerLink]="['/stars']"><span>Stars</span></a>
                 </li>
+                <li class="links"><a [routerLink]="['/csstricks']"><span>Css Tricks</span></a>
+                </li>
+
+                <li class="links"><a [routerLink]="['/css']"><span>Css</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/subject']"><span>Subject</span></a>
+                </li>
+                <li class="links"><a [routerLink]="['/reactive']"><span>Reactive</span></a>
+                </li>
+
             </ul>
         </nav>
     </header>
 </div>
 <router-outlet></router-outlet>
+<router-outlet name="aside"></router-outlet>
 
 <!-- 
 <div class="content">

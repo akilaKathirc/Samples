@@ -1,0 +1,120 @@
+.container {
+    // height: 95vh;
+    width: 97vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // border: 2px solid red;
+    box-shadow: 2px 2px 5px rgba(58, 56, 56, 0.685);
+    margin: 0 auto;
+    // overflow-y: scroll;
+    height: min(1000px, 100%);
+    background: #686867;
+
+    & .headingbox {
+        padding: 0 5rem;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 5px rgba(58, 56, 56, 0.685);
+    }
+
+    & div {
+        background: #fff;
+        padding: 1rem;
+        display: inline-block;
+    }
+
+    & .leftdiv {
+        width: 45%;
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        & .topdiv {
+            min-height: 30%;
+            // box-shadow: -1px -5px 5px rgba(58, 56, 56, 0.3);
+        }
+
+        & .bottomdiv {
+            max-height: 60%;
+            // box-shadow: -1px -5px 5px rgba(58, 56, 56, 0.3);
+
+            & .imageheading {
+                margin-left: auto;
+                text-align: center;
+            }
+            & .seaimage {
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                float: left;
+                margin: 5px;
+                shape-outside: circle();
+            }
+        }
+    }
+
+    & .rightdiv {
+        width: 45%;
+        height: 90%;
+        & .righttop {
+            margin: 1rem;
+            height: 50%;
+            & p {
+                min-height: 50%;
+            }
+        }
+
+        & .rightbottom {
+            position: relative;
+            height: 30%;
+            width: 100%;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20%;
+                height: 100%;
+                float: right;
+                background: url(../../assets/image/sea3.jpg);
+                background-position: bottom;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: rgba(214, 205, 205, 0.6);
+                background-blend-mode: lighten;
+                clip-path: circle(61% at right 50%);
+                shape-outside: circle(61% at right 50%) padding-box;
+                margin-left: 3rem !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        overflow-y: scroll;
+        // & div {
+        //     box-shadow: 0 0 0;
+        //     border: 1px solid black;
+        // }
+
+        & .leftdiv,
+        & .rightdiv {
+            width: 90vw !important;
+            padding: 1rem;
+            margin: 2rem !important;
+        }
+    }
+}

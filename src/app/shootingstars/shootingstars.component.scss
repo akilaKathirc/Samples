@@ -77,6 +77,6 @@
             left: randomNum($i, ($i * 2)) * 10px !important;
         }
 
-        animation-delay: $i * 100ms !important;
+        animation-delay: $i * randomNum($i, ($i * 5)) * 100ms !important;
     }
 }

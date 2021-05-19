@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;1,200&display=swap");
+
 :host ::ng-deep h2 {
     background: linear-gradient(to right, #a71a1a, #1ba755);
 }
@@ -7,17 +10,34 @@
 }
 
 .destructing {
+    contain: layout inline-size !important;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     padding: 1.5rem 3rem;
+    flex-wrap: wrap;
 }
 
 .cake {
     padding: 1.5rem 3rem;
     border-radius: 50px;
-    border: 2px solid linear-gradient(to right, #095cda, #058867);
-    background: coral;
+    background: linear-gradient(to right, #fff700, #ff00cc, #fd0e35, #fafa37, #66ff66, #87ff2a);
     background-size: 400%;
+    margin-top: 1rem;
+    outline: none;
+    color: #1b1b1b;
+    // animation: bganimation 10s linear infinite;
+    font-weight: 900;
+    font-family: "Newsreader", serif;
+}
+
+@keyframes bganimation {
+    0%,
+    100% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
 }

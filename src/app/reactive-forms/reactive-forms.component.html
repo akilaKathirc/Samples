@@ -1,0 +1,117 @@
+<form [formGroup]="empform" (ngSubmit)="onSubmit()">
+    <div class="form-group col-md-4">
+        <label for="name" class="col-md-2">Name :</label>
+        <input type="text" class="form-control col-md-2" formControlName="name"> {{nameVal}}
+        <span class="text-danger" *ngIf="(empform.get('name')?.touched || submitted)
+         && empform.get('name')?.errors?.required">
+            Name is required
+        </span>
+    </div>
+    <div class="form-group col-md-4">
+        <label class="col-md-2">Email</label>
+        <input type="text" class="form-control col-md-2" formControlName="email">
+        <span class="text-danger"
+            *ngIf="(empform.get('email')?.touched || submitted) && empform.get('email')?.errors?.required">
+            Email is required
+        </span>
+        <span class="text-danger" *ngIf="empform.get('email')?.touched && empform.get('email')?.errors?.email">
+            Enter a valid email address
+        </span>
+    </div>
+    <div class="form-group col-md-4">
+        <label class="col-md-2">User Name</label>
+        <input type="text" class="form-control col-md-2" formControlName="username">
+        <span class="text-danger"
+            *ngIf="(empform.get('username')?.touched || submitted) && empform.get('username')?.errors?.required">
+            User Name is required
+        </span>
+        <span class="text-danger" *ngIf="empform.get('username')?.touched
+         && empform.get('username')?.errors?.userNameNotAvailable">
+            User Name is not available
+        </span>
+    </div>
+    <div class="form-group  col-md-4">
+        <label class="col-md-2">Password</label>
+        <input type="password" class="form-control col-md-2" formControlName="password">
+        <span class="text-danger"
+            *ngIf="(empform.get('password')?.touched || submitted) && empform.get('password')?.errors?.required">
+            Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="empform.get('password')?.touched && empform.get('password')?.errors?.invalidPassword">
+            Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+            letter and 1 number
+        </span>
+    </div>
+    <div class="form-group col-md-4">
+        <label class="col-md-2">Confirm Password</label>
+        <input type="password" class="form-control col-md-2" formControlName="confirmPassword">
+        <span class="text-danger"
+            *ngIf="(empform.get('confirmPassword')?.touched || submitted)&& empform.get('confirmPassword')?.errors?.required">
+            Confirm Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="empform.get('confirmPassword')?.touched && empform.get('confirmPassword')?.errors?.passwordMismatch">
+            Passwords does not match
+        </span>
+    </div>
+
+    <div class="form-group col-md-4">
+        <label for="designation">Designation</label>
+        <input type="text" class="form-control col-md-2" formControlName="designation">
+    </div>
+
+    <!-- 
+    <div class="form-group" formGroupName="address">
+        <div class="form-group col-md-4">
+            <label class="col-md-2" for="street">Street</label>
+            <input type="text" class="form-control col-md-2" formControlName="street">
+        </div>
+
+        <div class="form-group col-md-4"><label class="col-md-2" for="suite">Suite</label><input type="text"
+                class="form-control col-md-2" formControlName="suite"></div>
+
+        <div class="form-group col-md-4"><label class="col-md-2" for="city">City</label><input type="text"
+                class="form-control col-md-2" formControlName="city"></div>
+
+        <div class="form-group col-md-4"><label class="col-md-2" for="zipcode">Zipcode</label><input type="text"
+                class="form-control col-md-2" formControlName="zipcode"></div>
+    </div> -->
+
+
+    <button type="submit" [disabled]="empform.invalid">Submit</button>
+
+    <div>
+        <button type="button" (click)="setValue()">SetValue</button>
+        <button type="button" (click)="setAddress()">Address</button>
+        <button type="button" (click)="setFirstname()">First Name</button>
+    </div>
+    <div>
+        <button type="button" (click)="withoutOnlySelf()">Without Only Self</button>
+        <button type="button" (click)="withOnlySelf()">With Only Self</button>
+    </div>
+    <div>
+        <button type="button" (click)="withoutEmitEvent()">Without EmitEvent</button>
+        <button type="button" (click)="withEmitEvent()">With EmitEvent</button>
+    </div>
+</form>
+
+
+<div style="float: right; width:50%;">
+
+    <h3>Form Status</h3><br>
+    <b>status : </b>{{empform.status}}<br>
+    <b>valid : </b>{{empform.valid}}<br>
+    <b>invalid : </b>{{empform.invalid}}<br>
+    <b>touched : </b>{{empform.touched}}<br>
+    <b>untouched : </b>{{empform.untouched}}<br>
+    <b>pristine : </b>{{empform.pristine}}<br>
+    <b>dirty : </b>{{empform.dirty}}<br>
+    <b>disabled : </b>{{empform.disabled}}<br>
+    <b>enabled : </b>{{empform.enabled}}<br>
+
+
+    <h3>Form Value</h3>
+    {{empform.value |json}}<br>
+
+</div>

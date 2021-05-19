@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EMPTY, fromEvent, interval, merge, of } from 'rxjs';
-import { concatMap, debounceTime, distinctUntilChanged, map, mapTo, mergeMap, pluck, scan, startWith, switchMap, takeWhile, tap } from 'rxjs/operators';
+import { combineLatest, concat, EMPTY, fromEvent, interval, merge, of, timer } from 'rxjs';
+import { combineAll, concatMap, debounceTime, distinctUntilChanged, map, mapTo, mergeMap, pluck, scan, startWith, switchMap, take, takeWhile, tap } from 'rxjs/operators';
 
 
 
@@ -72,4 +72,57 @@ export class RxjsOperatorsComponent implements OnInit {
     ).subscribe((c) => console.log(c));
   }
 
+  public combineAllEx() {
+    const first$ = interval(100).pipe(take(2));
+    const second$ = first$.pipe(
+      map((val) =>
+        interval(200).pipe(
+          map((val1) => `First observable output :${val} , Second observable output :${val1} `),
+          take(5),
+        )));
+
+    const combinedOutput = second$.pipe(combineAll());
+    combinedOutput.subscribe((op) => console.log(op));
+  }
+
+  public combineLatestEx() {
+    const timer1$ = timer(1000, 1010).pipe(take(2));
+    const timer2$ = timer(2000, 2010).pipe(take(2));
+    const timer3$ = timer(3000, 3010).pipe(take(2));
+
+    combineLatest(timer1$, timer2$, timer3$)
+      .subscribe(([val1, val2, val3]) => {
+        console.log(`Timer one value : ${val1},
+      Timer two value : ${val2},
+      Timer three value : ${val3},`)
+      })
+
+
+  }
+
+  public combineLatestEx1() {
+    const redLabel = document.getElementById("red-count");
+    const blueLabel = document.getElementById("blue-count");
+    const totalLabel = document.getElementById("total");
+
+    const addClickListener = (id: string) =>
+      fromEvent(<HTMLElement>document.getElementById(id), 'click').pipe(
+        mapTo(1),
+        scan((acc, curr) => acc + curr, 0),
+        startWith(0)
+      );
+
+    combineLatest(addClickListener('red'), addClickListener('blue'))
+      .subscribe(([red, blue]: any) => {
+        (<HTMLElement>redLabel).innerHTML = red;
+        (<HTMLElement>blueLabel).innerHTML = blue;
+        (<HTMLElement>totalLabel).innerHTML = red + blue;
+
+      })
+
+  }
+
+  public concatEx() {
+    concat(of(1, 2, 3), of(4, 5, 6), of(7, 8, 9)).subscribe(console.log);
+  }
 }

@@ -1,13 +1,26 @@
 <div class="container">
     <h2>jsfunctions works!</h2>
     <div class="destructing">
-        <button class="cake" (click)="cakeRecipeDestructing()">Cake Batter</button>
+        <button class="cake" (click)="cakeRecipeDestructing()">Destructing</button>
 
         <button class="cake" (click)="getUsers()">Pluck</button>
 
         <button class="cake" (click)="jsSpread()">Object Assign</button>
         <button class="cake" (click)="forIn()">For In</button>
         <button class="cake" (click)="forOf()">For Of</button>
+        <button class="cake" (click)="findIndexfn()">Find Index</button>
+        <button class="cake" (click)="power()">
+            Power
+        </button>
+        <button class="cake" (click)="isElementinArray()">Includes</button>
+        <button class="cake" (click)="ObjectEntries()">ObjectEntries</button>
+        <button class="cake" (click)="arrayFrom()">ArrayFrom</button>
+        <button class="cake" (click)="arrayReduce()">ArrayReduce</button>
+        <button class="cake" (click)="arrayConcat()">ArrayConcat</button>
+        <button class="cake" (click)="arrayUnshift()">ArrayUnshift</button>
+
+        <button class="cake" (click)="letVarDiff()">Let Var</button>
+        <button class="cake" (click)="ObjectValues()">Object Values</button>
 
 
     </div>
@@ -32,6 +45,64 @@
 
 
 <div class="container" *ngIf="objectSpread">
-    Object Spreaded and assigned
+    <strong> Object Spreaded and assigned</strong>
     {{objectSpread?.name}} - {{objectSpread?.age}}
+</div>
+
+
+<div class="content" *ngIf="findoutput">
+    <strong> Original Array:</strong>
+
+    {{arr}}
+    <div class="container">
+        <strong> Find Output</strong>
+        {{findoutput}}
+    </div>
+
+
+    <div class="container" *ngIf="findIndexoutput">
+        <strong> Find Index Output</strong>
+        {{findIndexoutput}}
+    </div>
+</div>
+
+<div class="container" *ngIf="objectEntries">
+    <strong>Entries</strong>
+    <div class="elements" *ngFor="let item of objectEntries;let i = index">
+        {{item}}
+
+    </div>
+</div>
+
+<div class="container" *ngIf="arrayfrom">
+    <strong>Original Array:</strong>
+    <strong>[1, 2, 3, 4, 56, 7]</strong>
+    <br>
+    {{arrayfrom}}
+</div>
+
+
+<div class="container" *ngIf="arrayreduce">
+    <strong>Original Array:</strong>
+    <strong>[1, 2, 3, 4, 56, 7]</strong>
+    <br>
+    {{arrayreduce}}
+</div>
+
+
+<div class="container" *ngIf="arrayconcat">
+    <strong>Original Array:</strong>
+    <strong> ['Batman', 'Robin'] ,['Joker', 'Bane'] </strong>
+    <br>
+    {{arrayconcat}}
+</div>
+
+
+
+<div class="container" *ngIf="arrayunshift">
+    <strong>Original Array:</strong>
+    <strong> ['Batman', 'Captain America', 'Captain Marvel'] </strong>
+    <strong>New Element : "Miss"</strong>
+    <br>
+    {{arrayunshift}}
 </div>

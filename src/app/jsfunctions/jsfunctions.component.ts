@@ -24,6 +24,14 @@ export class JsfunctionsComponent implements OnInit {
   public batters: Batter[] = [];
   public objectSpread!: Person;
   public arraySpread!: Person[];
+  public findoutput: any;
+  public findIndexoutput: any;
+  public arr = [10, 22, 32, 41, 59, 20];
+  public objectEntries!: [string, string][];
+  public arrayfrom!: number[];
+  public arrayconcat!: string[];
+  public arrayreduce!: number;
+  public arrayunshift!: string[];
 
   constructor(private dataService: DataService) {
     // this.dataService.GetUser();
@@ -38,12 +46,12 @@ export class JsfunctionsComponent implements OnInit {
   cakeRecipeDestructing() {
     const cakeobj = CAKE_RECIPE[0];
     const { batters: { batter } } = cakeobj;
-    // // console.log('double sort :', this.doubleSort((batter as Batter[]), TempEnum.type, TempEnum.id));
+    console.log('double sort :', this.doubleSort((batter as Batter[]), TempEnum.type, TempEnum.id));
   }
 
   retrievePropValues(obj: any) {
     for (let val in obj) {
-      // console.log(`Property name is ${val}    and its value is ${obj[val]}`);
+      console.log(`Property name is ${val}    and its value is ${obj[val]}`);
     }
   }
 
@@ -123,7 +131,9 @@ export class JsfunctionsComponent implements OnInit {
     const targetArr = [{ name: "Fine", age: 40 },
     { name: "Dine", age: 20 },
     { name: "Shine", age: 22 }];
-    this.arraySpread = [...sourceArr, ...targetArr, { name: "Newly added", age: 33 }];
+    this.arraySpread = new Array(...sourceArr, ...targetArr, { name: "Newly added", age: 33 })
+
+    // [...sourceArr, ...targetArr, { name: "Newly added", age: 33 }];
 
   }
 
@@ -144,9 +154,111 @@ export class JsfunctionsComponent implements OnInit {
     //will return objects
 
     for (let value of sourceArr) {
-      console.log('for in output with Array', value);
+      console.log('for of output with Array', value);
     }
   }
   //USERS MANIPULATION END
+
+
+  //javascript functions
+
+  public findIndexfn() {
+    //returns the value of the first array element that passes a test function.
+    this.findoutput = this.arr.find(z => z > 50);
+    //returns the index of the first array element that passes a test function
+    this.findIndexoutput = this.arr.findIndex(c => c > 30);
+  }
+
+  public power() {
+    let x = 5;
+    x **= 2;
+
+    console.log(`5 power 2 is ${x} can be achieved by "x **= 2" `);
+  }
+
+  //To check element present in array
+
+  public isElementinArray() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.includes("Mango");
+
+    console.log(fruits, " includes mango??  ", fruits.includes("Mango"))
+  }
+
+  public ObjectEntries() {
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: "50",
+      eyeColor: "blue"
+    };
+    this.objectEntries = Object.entries(person);
+    console.log(Object.entries(person))
+
+    console.log('is this array include John .... ', this.objectEntries[0].includes("John"))
+
+    const eve: [string, string] = ["firstName", "John"];
+
+    console.log('is this array include ["firstName","John"] .... ', this.objectEntries.includes(eve));
+    //super includes for array of arrays
+    const includes = this.objectEntries.some(a => eve.every((v, i) => {
+      return v === a[i];
+    }));
+    console.log(includes);
+
+
+    const soome = this.objectEntries.some(a => { return a === this.objectEntries[0] });
+    console.log('array with some operator ["firstName","John"] .... ', soome);
+
+    const evvery = this.objectEntries.every(a => { return a === this.objectEntries[0] });
+    console.log('array with every operator ["firstName","John"] .... ', evvery);
+  }
+
+  public arrayFrom() {
+    const arr = [1, 2, 3, 4, 56, 7];
+    this.arrayfrom = Array.from(arr, (n) => {
+      return n * 20;
+    });
+
+    console.log(this.arrayfrom)
+  }
+
+  public arrayReduce() {
+    const arr = [1, 2, 3, 4, 56, 7];
+    this.arrayreduce = arr.reduce((acc, curr) => acc + curr, 0)
+  }
+
+  public arrayConcat() {
+    const heroes = ['Batman', 'Robin'];
+    const villains = ['Joker', 'Bane'];
+    this.arrayconcat = heroes.concat(villains);
+  }
+
+  public arrayUnshift() {
+    const names = ['Batman', 'Captain America', 'Captain Marvel'];
+    names.unshift('Miss');
+    this.arrayunshift = names;
+  }
+
+  public letVarDiff() {
+    if (true) {
+      var y = 6;
+      let x = 5;
+      console.log(`X is : ${x}, y is :${y}`);
+    }
+    // console.log(`X is : ${x}, y is :${y}`);
+
+  }
+
+
+  public ObjectValues() {
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: "50",
+      eyeColor: "blue"
+    };
+    console.log('ObjectValues  ', Object.values(person).join(" "));
+  }
 }
 

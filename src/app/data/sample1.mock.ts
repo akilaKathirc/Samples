@@ -5,15 +5,19 @@ export const CAKE_RECIPE = [
 		"name": "Cake",
 		"ppu": 0.55,
 		"batters":
-			{
-				"batter":
-					[
-						{ "id": "1001", "type": "Regular" },
-						{ "id": "1002", "type": "Chocolate" },
-						{ "id": "1003", "type": "Blueberry" },
-						{ "id": "1004", "type": "Devil's Food" }
-					]
-			},
+		{
+			"batter":
+				[
+					{ "id": "1001", "type": "Regular" },
+					{ "id": "1002", "type": "Chocolate" },
+					{ "id": "1003", "type": "Blueberry" },
+					{ "id": "1004", "type": "Devil's Food" },
+					{ "id": "1005", "type": "Red Velvet" },
+					{ "id": "1006", "type": "Rogger" },
+					{ "id": "1007", "type": "Red Velvet" },
+
+				]
+		},
 		"topping":
 			[
 				{ "id": "5001", "type": "None" },
@@ -31,12 +35,12 @@ export const CAKE_RECIPE = [
 		"name": "Raised",
 		"ppu": 0.55,
 		"batters":
-			{
-				"batter":
-					[
-						{ "id": "1001", "type": "Regular" }
-					]
-			},
+		{
+			"batter":
+				[
+					{ "id": "1001", "type": "Regular" }
+				]
+		},
 		"topping":
 			[
 				{ "id": "5001", "type": "None" },
@@ -52,13 +56,13 @@ export const CAKE_RECIPE = [
 		"name": "Old Fashioned",
 		"ppu": 0.55,
 		"batters":
-			{
-				"batter":
-					[
-						{ "id": "1001", "type": "Regular" },
-						{ "id": "1002", "type": "Chocolate" }
-					]
-			},
+		{
+			"batter":
+				[
+					{ "id": "1001", "type": "Regular" },
+					{ "id": "1002", "type": "Chocolate" }
+				]
+		},
 		"topping":
 			[
 				{ "id": "5001", "type": "None" },

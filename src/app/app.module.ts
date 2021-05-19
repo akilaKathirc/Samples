@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,10 @@ import { BarchartComponent } from './barchart/barchart.component';
 import { DonutchartComponent } from './donutchart/donutchart.component';
 import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
 import { ShootingstarsComponent } from './shootingstars/shootingstars.component';
+import { MinWidthHeightComponent } from './min-width-height/min-width-height.component';
+import { CsstricksComponent } from './csstricks/csstricks.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { ReactiveformvalidationComponent } from './reactiveformvalidation/reactiveformvalidation.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +44,18 @@ import { ShootingstarsComponent } from './shootingstars/shootingstars.component'
     DonutchartComponent,
     RxjsOperatorsComponent,
     ShootingstarsComponent,
+    MinWidthHeightComponent,
+    CsstricksComponent,
+    ReactiveFormsComponent,
+    ReactiveformvalidationComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgxChartsModule
+    NgxChartsModule,
   ],
   providers: [
     // { provide: REPORTER, useExisting: AlphaReporterService, multi: true },

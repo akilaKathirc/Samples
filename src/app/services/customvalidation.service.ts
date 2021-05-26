@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ValidatorFn, AbstractControl, AsyncValidatorFn, ValidationErrors } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-import { Observable, of } from 'rxjs';
-import { delay, map } from 'rxjs/operators';
+import { fromEvent, Observable, of } from 'rxjs';
+import { debounceTime, delay, distinctUntilChanged, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -37,12 +37,11 @@ export class CustomvalidationService {
 
       }
 
-      if (passwordControl.value !== confirmPasswordControl.value) {
+      if (confirmPasswordControl.value && passwordControl.value !== confirmPasswordControl.value) {
+        passwordControl.setErrors({ passwordMismatch: true });
         confirmPasswordControl.setErrors({ passwordMismatch: true });
-        // return "passwordMismatch";
       } else {
         confirmPasswordControl.setErrors(null);
-        // return null;
       }
     }
   }
@@ -50,7 +49,9 @@ export class CustomvalidationService {
   userNameValidator(userControl: AbstractControl) {
     return new Promise(resolve => {
       setTimeout(() => {
-        if (this.validateUserName(userControl.value)) {
+        const UserList = ['ankit', 'admin', 'user', 'superuser'];
+        const result = UserList.indexOf(userControl.value);
+        if (result === -1) {
           resolve({ userNameNotAvailable: true });
         } else {
           resolve(null);
@@ -75,8 +76,6 @@ export class CustomvalidationService {
     };
   }
 
-  validateUserName(userName: string) {
-    const UserList = ['ankit', 'admin', 'user', 'superuser'];
-    return (UserList.indexOf(userName) > -1);
-  }
+
 }
+

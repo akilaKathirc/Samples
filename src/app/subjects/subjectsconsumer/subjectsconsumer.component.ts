@@ -31,7 +31,6 @@ export class SubjectsconsumerComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.empform.get("name")?.valueChanges
       .subscribe((val) => {
-        alert('fdgfghf')
         this.nameVal = val;
         console.log('PREV1', val);
       });
@@ -41,7 +40,6 @@ export class SubjectsconsumerComponent implements OnInit, OnChanges {
     this.empform.get("name")?.patchValue('Akilandeswari');
     this.empform.get("name")?.valueChanges
       .subscribe((val) => {
-        alert('fdgfghf')
         this.nameVal = val;
         console.log('PREV1', val);
       });

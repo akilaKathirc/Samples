@@ -19,3 +19,18 @@ export function MustMatch(controlName: string, matchingControlName: string) {
         }
     }
 }
+
+
+
+export function isUserNameAvalilable(controlName: string) {
+    return (formGroup: FormGroup) => {
+        const userControl = formGroup.controls[controlName];
+        const UserList = ['ankit', 'admin', 'user', 'superuser', 'akila chengi'];
+        if (UserList.indexOf(userControl.value) === -1) {
+            userControl.setErrors({ userNameNotAvailable: true })
+        }
+        else {
+            userControl.setErrors(null);
+        }
+    }
+}

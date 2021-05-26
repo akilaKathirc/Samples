@@ -67,104 +67,104 @@ span:nth-child(0) {
 }
 
 span:nth-child(1) {
-  top: 270px !important;
-  left: 20px !important;
-  animation-delay: 100ms !important;
+  top: 390px !important;
+  left: 10px !important;
+  animation-delay: 500ms !important;
 }
 
 span:nth-child(2) {
-  top: 30px !important;
-  right: 360px !important;
-  animation-delay: 1200ms !important;
+  top: 140px !important;
+  right: 680px !important;
+  animation-delay: 600ms !important;
 }
 
 span:nth-child(3) {
-  top: 970px !important;
-  left: 50px !important;
-  animation-delay: 900ms !important;
+  top: 1160px !important;
+  left: 40px !important;
+  animation-delay: 1200ms !important;
 }
 
 span:nth-child(4) {
-  top: 990px !important;
-  right: 5360px !important;
-  animation-delay: 5200ms !important;
+  top: 580px !important;
+  right: 4440px !important;
+  animation-delay: 6400ms !important;
 }
 
 span:nth-child(5) {
-  top: 330px !important;
-  left: 100px !important;
-  animation-delay: 2500ms !important;
+  top: 100px !important;
+  left: 80px !important;
+  animation-delay: 12500ms !important;
 }
 
 span:nth-child(6) {
-  top: 490px !important;
-  right: 6800px !important;
-  animation-delay: 11400ms !important;
+  top: 440px !important;
+  right: 8400px !important;
+  animation-delay: 4200ms !important;
 }
 
 span:nth-child(7) {
-  top: 260px !important;
+  top: 3500px !important;
   left: 90px !important;
-  animation-delay: 12600ms !important;
+  animation-delay: 9100ms !important;
 }
 
 span:nth-child(8) {
-  top: 840px !important;
-  right: 4240px !important;
-  animation-delay: 10400ms !important;
+  top: 780px !important;
+  right: 3240px !important;
+  animation-delay: 32000ms !important;
 }
 
 span:nth-child(9) {
-  top: 300px !important;
-  left: 160px !important;
-  animation-delay: 36000ms !important;
+  top: 130px !important;
+  left: 110px !important;
+  animation-delay: 31500ms !important;
 }
 
 span:nth-child(10) {
-  top: 2470px !important;
-  right: 4760px !important;
-  animation-delay: 35000ms !important;
+  top: 1490px !important;
+  right: 1560px !important;
+  animation-delay: 39000ms !important;
 }
 
 span:nth-child(11) {
-  top: 2780px !important;
-  left: 210px !important;
-  animation-delay: 23100ms !important;
+  top: 3040px !important;
+  left: 140px !important;
+  animation-delay: 14300ms !important;
 }
 
 span:nth-child(12) {
-  top: 3490px !important;
-  right: 9080px !important;
-  animation-delay: 57600ms !important;
+  top: 5210px !important;
+  right: 11400px !important;
+  animation-delay: 44400ms !important;
 }
 
 span:nth-child(13) {
-  top: 4700px !important;
-  left: 130px !important;
-  animation-delay: 23400ms !important;
+  top: 2220px !important;
+  left: 190px !important;
+  animation-delay: 40300ms !important;
 }
 
 span:nth-child(14) {
-  top: 910px !important;
-  right: 2640px !important;
-  animation-delay: 23800ms !important;
+  top: 490px !important;
+  right: 4560px !important;
+  animation-delay: 70000ms !important;
 }
 
 span:nth-child(15) {
-  top: 2700px !important;
-  left: 210px !important;
-  animation-delay: 63000ms !important;
+  top: 6220px !important;
+  left: 290px !important;
+  animation-delay: 109500ms !important;
 }
 
 span:nth-child(16) {
-  top: 7660px !important;
-  right: 9400px !important;
-  animation-delay: 70400ms !important;
+  top: 4280px !important;
+  right: 11960px !important;
+  animation-delay: 102400ms !important;
 }
 
 span:nth-child(17) {
-  top: 3430px !important;
-  left: 340px !important;
-  animation-delay: 142800ms !important;
+  top: 3850px !important;
+  left: 200px !important;
+  animation-delay: 76500ms !important;
 }
 /*# sourceMappingURL=shootingstars.component.css.map */

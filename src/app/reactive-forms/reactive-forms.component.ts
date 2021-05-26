@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { isUserNameAvalilable } from '../reactiveformvalidation/matchPassword';
 import { CustomvalidationService } from '../services/customvalidation.service';
 
 @Component({
@@ -12,28 +13,29 @@ export class ReactiveFormsComponent implements OnInit {
   public nameVal!: string;
   public submitted: boolean = false;
 
-  constructor(private customValidator: CustomvalidationService) {
-    this.empform = new FormGroup({
+  constructor(private customValidator: CustomvalidationService,
+    private fb: FormBuilder) {
+    this.empform = this.fb.group({
       name: new FormControl('', [Validators.required]),
       designation: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      username: new FormControl('', [Validators.required, this.customValidator.usernameValidator()
-        // , this.customValidator.userNameValidator.bind(this)
+      username: new FormControl('', [Validators.required,
       ]
       ),
       password: new FormControl('', Validators.compose([Validators.required,
       this.customValidator.patternValidator()])),
       confirmPassword: new FormControl('', [Validators.required]),
-      // address: new FormGroup({
-      //   street: new FormControl('', [Validators.required]),
-      //   suite: new FormControl('', [Validators.required]),
-      //   city: new FormControl('', [Validators.required]),
-      //   zipcode: new FormControl('', [Validators.required])
-      // })
+      address: new FormGroup({
+        street: new FormControl('', [Validators.required]),
+        suite: new FormControl('', [Validators.required]),
+        city: new FormControl('', [Validators.required]),
+        zipcode: new FormControl('', [Validators.required])
+      })
     },
-      // {
-      //   this.customValidator.MatchPassword('password', 'confirmPassword'),
-      // }
+      {
+        validators: [this.customValidator.MatchPassword('password', 'confirmPassword'),
+        isUserNameAvalilable('username')]
+      },
     );
   }
 
@@ -61,6 +63,10 @@ export class ReactiveFormsComponent implements OnInit {
     let contact = {
       name: "Rahul",
       designation: "Dravid",
+      email: 'ak@gmail.com',
+      username: 'admin',
+      password: 'Akila1983$',
+      confirmPassword: 'Akila1983#',
       address: {
         city: "Bangalore",
         street: "Brigade Road",

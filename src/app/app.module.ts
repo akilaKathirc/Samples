@@ -27,6 +27,13 @@ import { MinWidthHeightComponent } from './min-width-height/min-width-height.com
 import { CsstricksComponent } from './csstricks/csstricks.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveformvalidationComponent } from './reactiveformvalidation/reactiveformvalidation.component';
+import { HoverCardsComponent } from './hover-cards/hover-cards.component';
+import { GridLayoutComponent } from './grid-layout/grid-layout.component';
+import { BlogenComponent } from './blogen/blogen.component';
+import { BlogenHeaderComponent } from './blogen-header/blogen-header.component';
+import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BlogenActionComponent } from './blogen-action/blogen-action.component';
+import { NgbdModal2ContentComponent } from './ngbd-modal2-content/ngbd-modal2-content.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +55,12 @@ import { ReactiveformvalidationComponent } from './reactiveformvalidation/reacti
     CsstricksComponent,
     ReactiveFormsComponent,
     ReactiveformvalidationComponent,
+    HoverCardsComponent,
+    GridLayoutComponent,
+    BlogenComponent,
+    BlogenHeaderComponent,
+    BlogenActionComponent,
+    NgbdModal2ContentComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,8 +69,11 @@ import { ReactiveformvalidationComponent } from './reactiveformvalidation/reacti
     AppRoutingModule,
     ReactiveFormsModule,
     NgxChartsModule,
+    NgbModule,
   ],
   providers: [
+    NgbActiveModal,
+
     // { provide: REPORTER, useExisting: AlphaReporterService, multi: true },
     // { provide: REPORTER, useExisting: BetaReporterService, multi: true }
   ],

@@ -1,0 +1,53 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-rows: 3fr 1fr 0.75fr 1.5fr 5fr;
+    grid-template-areas:
+        "box1 box1 . ."
+        "box2 box2 box2 ."
+        ". box3 box4 box4"
+        ". box5 box5 box5"
+        ". box6 . box7";
+
+    & .box1 {
+        grid-area: box1;
+        background: black;
+    }
+
+    & .box2 {
+        grid-area: box2;
+    }
+
+    & .box3 {
+        grid-area: box3;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+    }
+
+    & .box4 {
+        grid-area: box4;
+    }
+
+    & .box5 {
+        grid-area: box5;
+    }
+
+    & .box6 {
+        grid-area: box6;
+    }
+
+    & .box7 {
+        grid-area: box7;
+        border: 6px solid black;
+        padding: 2px;
+    }
+
+    & div:not(.box1, .box4) {
+        color: red;
+    }
+
+    & div:is(.box1, .box4) {
+        color: black;
+    }
+}

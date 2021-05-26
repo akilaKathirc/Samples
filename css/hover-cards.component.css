@@ -1,0 +1,66 @@
+.htmlbody {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: rgba(27, 26, 26, 0.9);
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.htmlbody .card {
+  background: rgba(27, 26, 26, 0.3);
+  color: #fff;
+  background-image: url(../../assets/image/watertree.jpg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-size: cover;
+  padding: 12rem 3rem 0 0;
+  max-width: 40ch;
+}
+
+.htmlbody .card .card-content {
+  padding: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), black);
+}
+
+.htmlbody .card .card-content .card-title {
+  position: relative;
+  width: max-content;
+}
+
+.htmlbody .card .card-content .card-title::after {
+  content: "";
+  position: absolute;
+  background: #04f5cd;
+  height: 3px;
+  left: calc(1.5rem * -1);
+  bottom: 0;
+  width: calc(1.5rem + 100%);
+  transform: scaleX(0.3);
+}
+
+.htmlbody .card .card-content .card-body {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.htmlbody .card .card-content .button {
+  cursor: pointer;
+  background: #04f5cd;
+  color: rgba(27, 26, 26, 0.9);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+
+.htmlbody .card .card-content .button:hover, .htmlbody .card .card-content .button:focus {
+  background: #fff;
+}
+
+.htmlbody .card:hover {
+  transform: scale(1.2);
+}
+
+.htmlbody .card:hover .card-content .card-title::after {
+  transform: scaleX(3);
+}
+/*# sourceMappingURL=hover-cards.component.css.map */

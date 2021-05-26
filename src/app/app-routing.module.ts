@@ -5,6 +5,8 @@ import { BarchartComponent } from './barchart/barchart.component';
 import { CsstricksComponent } from './csstricks/csstricks.component';
 import { CVAParentComponent } from './cva-parent/cva-parent.component';
 import { DonutchartComponent } from './donutchart/donutchart.component';
+import { GridLayoutComponent } from './grid-layout/grid-layout.component';
+import { HoverCardsComponent } from './hover-cards/hover-cards.component';
 import { JsfunctionsComponent } from './jsfunctions/jsfunctions.component';
 import { MinWidthHeightComponent } from './min-width-height/min-width-height.component';
 import { ParentWidgetComponent } from './parent-widget/parent-widget.component';
@@ -25,10 +27,11 @@ const routes: Routes = [
   { path: 'stars', component: ShootingstarsComponent },
   { path: 'css', component: MinWidthHeightComponent },
   { path: 'csstricks', component: CsstricksComponent },
-
+  { path: 'hover', component: HoverCardsComponent },
   { path: 'reactive', component: ReactiveformvalidationComponent },
-  { path: 'subject', loadChildren: () => import('./subjects/subjects.module').then(m => m.SubjectsModule) },
+  { path: 'grid', component: GridLayoutComponent },
 
+  { path: 'subject', loadChildren: () => import('./subjects/subjects.module').then(m => m.SubjectsModule) },
 ];
 
 @NgModule({

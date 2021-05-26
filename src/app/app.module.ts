@@ -27,6 +27,8 @@ import { MinWidthHeightComponent } from './min-width-height/min-width-height.com
 import { CsstricksComponent } from './csstricks/csstricks.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveformvalidationComponent } from './reactiveformvalidation/reactiveformvalidation.component';
+import { HoverCardsComponent } from './hover-cards/hover-cards.component';
+import { GridLayoutComponent } from './grid-layout/grid-layout.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { ReactiveformvalidationComponent } from './reactiveformvalidation/reacti
     CsstricksComponent,
     ReactiveFormsComponent,
     ReactiveformvalidationComponent,
+    HoverCardsComponent,
+    GridLayoutComponent,
   ],
   imports: [
     BrowserModule,

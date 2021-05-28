@@ -34,6 +34,10 @@ import { BlogenHeaderComponent } from './blogen-header/blogen-header.component';
 import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogenActionComponent } from './blogen-action/blogen-action.component';
 import { NgbdModal2ContentComponent } from './ngbd-modal2-content/ngbd-modal2-content.component';
+import { BlogenAddActionComponent } from './blogen-add-action/blogen-add-action.component';
+import { BlogenAddCategoryComponent } from './blogen-add-category/blogen-add-category.component';
+import { BlogenAddUsersComponent } from './blogen-add-users/blogen-add-users.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +65,10 @@ import { NgbdModal2ContentComponent } from './ngbd-modal2-content/ngbd-modal2-co
     BlogenHeaderComponent,
     BlogenActionComponent,
     NgbdModal2ContentComponent,
+    BlogenAddActionComponent,
+    BlogenAddCategoryComponent,
+    BlogenAddUsersComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

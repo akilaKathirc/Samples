@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdModal2ContentComponent } from '../ngbd-modal2-content/ngbd-modal2-content.component';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { BlogenAddActionComponent } from '../blogen-add-action/blogen-add-action.component';
+import { BlogenAddCategoryComponent } from '../blogen-add-category/blogen-add-category.component';
+import { BlogenAddUsersComponent } from '../blogen-add-users/blogen-add-users.component';
+import { ModalService } from '../services/modal.service';
+import { Actiontype } from '../shared/enums/actionType';
+
 
 @Component({
   selector: 'app-blogen-action',
@@ -9,14 +14,24 @@ import { NgbdModal2ContentComponent } from '../ngbd-modal2-content/ngbd-modal2-c
 
 })
 export class BlogenActionComponent implements OnInit {
+  constructor(private modalService: ModalService, public activeModal: NgbActiveModal) { }
 
-  constructor(private modalService: NgbModal, public activeModal: NgbActiveModal) { }
-
-  open() {
-    this.modalService.open(NgbdModal2ContentComponent, {
-      size: 'lg'
-    });
+  public get connectionResult(): typeof Actiontype {
+    return Actiontype;
   }
+
+  open(type: string) {
+    if (type === this.connectionResult.action) {
+      this.modalService.open(BlogenAddActionComponent);
+    }
+    else if (type === this.connectionResult.category) {
+      this.modalService.open(BlogenAddCategoryComponent);
+    }
+    else if (type === this.connectionResult.user) {
+      this.modalService.open(BlogenAddUsersComponent);
+    }
+  }
+
   ngOnInit(): void {
   }
 

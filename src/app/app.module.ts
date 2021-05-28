@@ -61,7 +61,6 @@ import { ModalComponent } from './modal/modal.component';
     ReactiveformvalidationComponent,
     HoverCardsComponent,
     GridLayoutComponent,
-<<<<<<< HEAD
     BlogenComponent,
     BlogenHeaderComponent,
     BlogenActionComponent,
@@ -70,8 +69,6 @@ import { ModalComponent } from './modal/modal.component';
     BlogenAddCategoryComponent,
     BlogenAddUsersComponent,
     ModalComponent,
-=======
->>>>>>> 033f5328a21a2377041a4e4978cfd3a84b24255b
   ],
   imports: [
     BrowserModule,
